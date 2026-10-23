@@ -1,16 +1,18 @@
 "use client";
 
-import { useState } from "react";
-import { coorganizers, organizers, partners, type Organization } from "@/data/site";
+import Link from "next/link";
+import { useState, type ReactNode } from "react";
+import { coorganizers, organizers, partners, site, type Organization } from "@/data/site";
 import { OrganizationModal } from "./OrganizationModal";
 import { OrganizationLogo } from "./OrganizationLogo";
 import { SectionAction } from "./SectionAction";
 
-function OrganizationCards({ items, variant = "three", startIndex = 0, onSelect }: {
+function OrganizationCards({ items, variant = "three", startIndex = 0, onSelect, children }: {
   items: Organization[];
   variant?: "one" | "two" | "three";
   startIndex?: number;
   onSelect: (organization: Organization) => void;
+  children?: ReactNode;
 }) {
   const columns = variant === "three" ? 3 : variant === "two" ? 2 : 1;
   return (
@@ -30,6 +32,7 @@ function OrganizationCards({ items, variant = "three", startIndex = 0, onSelect 
           </li>
         );
       })}
+      {children}
     </ul>
   );
 }
@@ -59,11 +62,16 @@ export function PartnersSection() {
             <h3 className="organization-heading" id="supporters-title"><span>合作單位</span></h3>
             <OrganizationCards items={partners.slice(0, 1)} variant="one" onSelect={setSelected} />
           </section>
-          {partners.length > 1 && (
-            <section className="organization-group organization-group--partner-overflow" aria-labelledby="supporters-title">
-              <OrganizationCards items={partners.slice(1)} startIndex={1} onSelect={setSelected} />
-            </section>
-          )}
+          <section className="organization-group organization-group--partner-overflow" aria-labelledby="supporters-title">
+            <OrganizationCards items={partners.slice(1)} startIndex={1} onSelect={setSelected}>
+              <li className="organization-recruitment">
+                <Link className="organization-recruitment-link" href={site.links.sponsorship}>
+                  <span className="organization-recruitment-title">合作夥伴招募中</span>
+                  <span className="organization-recruitment-action">了解贊助與合作方式 <span aria-hidden="true">→</span></span>
+                </Link>
+              </li>
+            </OrganizationCards>
+          </section>
         </div>
         <SectionAction section="partners" placement="footer" />
       </div>

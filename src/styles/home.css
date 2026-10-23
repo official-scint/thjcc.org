@@ -1114,6 +1114,48 @@
   margin-top: 0;
 }
 
+.organization-recruitment {
+  grid-column: span 2;
+  height: 261px;
+  min-width: 0;
+  overflow: hidden;
+  border: 3px solid var(--color-card-border);
+  border-radius: var(--radius-card-small) var(--radius-card-large) var(--radius-card-large) var(--radius-card-small);
+  transition: border-color 180ms ease, background-color 180ms ease;
+}
+
+.organization-recruitment:is(:hover, :focus-within) {
+  border-color: rgb(249 245 239 / 50%);
+  background: rgb(249 245 239 / 6%);
+}
+
+.organization-recruitment-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  color: var(--color-white);
+  text-align: center;
+}
+
+.organization-recruitment-link:focus-visible {
+  outline-offset: -7px;
+}
+
+.organization-recruitment-title {
+  font-size: clamp(24px, 3vw, 36px);
+  line-height: 1.4;
+}
+
+.organization-recruitment-action {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
 .organization-group--partners .organization-heading {
   padding-right: 15px;
 }
@@ -1340,6 +1382,10 @@
 
   .organization-group--partner-overflow .organization-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .organization-recruitment {
+    border-radius: var(--radius-card-large);
   }
 
   .organization-group--partner-overflow .organization-card:nth-child(odd) {
@@ -1807,6 +1853,10 @@
 
   .organization-group--partner-overflow .organization-grid {
     grid-template-columns: minmax(0, 370px);
+  }
+
+  .organization-recruitment {
+    grid-column: 1;
   }
 
   .organization-group--partner-overflow .organization-card:nth-child(n) {
