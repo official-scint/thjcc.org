@@ -9,7 +9,7 @@ export function TeamAvatar({ member, sizes = "(max-width: 767px) 140px, 200px", 
   accessory?: ReactNode;
 }) {
   return (
-    <div className={`team-avatar${member.image ? "" : " team-avatar--placeholder"}${member.roundAvatar ? " team-avatar--round" : ""}${accessory ? " team-avatar--interactive-hat" : ""}`}>
+    <div className={`team-avatar${member.image ? "" : " team-avatar--placeholder"}${accessory ? " team-avatar--interactive-hat" : ""}`}>
       <Image src={member.image ?? "/icons/android-chrome-512x512.png"} width={200} height={200}
         alt={member.image ? `${member.name} 的頭像` : `${member.name} 的預設頭像（THJCC icon）`} sizes={sizes} />
       {accessory ?? (decorated && member.decoration && (

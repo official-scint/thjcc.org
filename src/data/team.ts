@@ -37,7 +37,6 @@ export type TeamMember = {
   featured?: boolean;
   decoration?: "left" | "right" | "denny" | "jonah" | "justin" | "twcat";
   largeRole?: boolean;
-  roundAvatar?: boolean;
 };
 
 // Group and position control the directory badges.
@@ -123,8 +122,14 @@ export const teamMembers: TeamMember[] = [
     group: "challenges", position: "member",
   },
   {
-    id: "r3x-dj", name: "R3X DJ", image: null,
+    id: "r3x-dj", name: "R3X DJ", image: "https://r3xdj.pages.dev/img/icy_star.png",
     group: "challenges", position: "member",
+    bio: ["RCEs 戰隊隊長，喜歡數學、資安、講幹話。可以教我怎麼出 CTF 題目ㄇ"],
+    socialLinks: [
+      { label: "GitHub", href: "https://github.com/r3xdj" },
+      { label: "Instagram", href: "https://www.instagram.com/_ts.hacker/" },
+      { label: "Website", href: "https://r3xdj.pages.dev/" }
+    ]
   },
   {
     id: "cgm-97", name: "Cgm._.97", image: null,
@@ -152,7 +157,7 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: "凡", name: "凡", image: "https://casperlin100w.github.io/image/sidebar/avatar.jpg",
-    group: "administration", position: "member", roundAvatar: true,
+    group: "administration", position: "member",
     bio: ["聽說這邊需要文書所以我來了，人家是資安小白我是白到反光o(TヘTo)"],
     socialLinks: [
       { label: "Instagram", href: "https://instagram.com/llf._.meow" },

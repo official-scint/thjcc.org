@@ -667,9 +667,6 @@
 .team-avatar > img:first-child {
   width: 100%;
   height: 100%;
-}
-
-.team-avatar--round > img:first-child {
   border-radius: 50%;
   object-fit: cover;
 }
@@ -681,10 +678,6 @@
   border-radius: 50%;
   color: var(--color-muted);
   background: rgb(249 245 239 / 6%);
-}
-
-.team-avatar--placeholder > img:first-child {
-  border-radius: 50%;
 }
 
 .team-directory-link,
