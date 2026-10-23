@@ -98,8 +98,14 @@ export const teamMembers: TeamMember[] = [
     group: "challenges", position: "member",
   },
   {
-    id: "sirius-w", name: "SIRIUS-W", image: null,
+    id: "sirius-w", name: "SIRIUS-W", image: "https://siriusw823-avatar.pages.dev/IMAG2263_1.jpg",
     group: "challenges", position: "member",
+    bio: ["熱知識：SIRIUS 是天狼星的意思"],
+    socialLinks: [
+      { label: "Instagram", href: "https://www.instagram.com/s1rius_w/" },
+      { label: "GitHub", href: "https://github.com/SiriusW823" },
+      { label: "ORCID", href: "https://orcid.org/0009-0000-4638-4749" },
+    ],
   },
   {
     id: "xzhiyouu", name: "xzhiyouu", image: null,
