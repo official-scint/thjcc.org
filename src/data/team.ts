@@ -132,8 +132,14 @@ export const teamMembers: TeamMember[] = [
     ]
   },
   {
-    id: "cgm-97", name: "Cgm._.97", image: null,
+    id: "cgm-97", name: "Cgm._.97", image: "https://cgm-csie.me/img/Profile.png",
     group: "challenges", position: "member",
+    bio: ["RCEs 戰隊副隊長，一個正在資工系熬夜爆肝的高三生"],
+    socialLinks: [
+      { label: "個人網站", href: "https://cgm-csie.me/" },
+      { label: "Instagram", href: "https://www.instagram.com/cgm._.97/" },
+      { label: "GitHub", href: "https://github.com/Cgm-97" },
+    ],
   },
   {
     id: "lao-z-3", name: "LAO_Z_3", image: null,
@@ -144,12 +150,24 @@ export const teamMembers: TeamMember[] = [
     group: "testing", position: "lead",
   },
   {
-    id: "steven", name: "Steven", image: null,
+    id: "steven", name: "Steven", image: "https://steventeng.uk/steven-drawing.png",
     group: "infrastructure", position: "member",
+    bio: ["好玩😊"],
+    socialLinks: [
+      { label: "個人網站", href: "https://steventeng.uk/" },
+      { label: "Email", href: "mailto:me@steventeng.uk" },
+      { label: "Instagram", href: "https://www.instagram.com/steventeng0925/" },
+      { label: "GitHub", href: "https://github.com/steventeng2022" },
+    ],
   },
   {
-    id: "吳鑽", name: "吳鑽", image: null,
+    id: "吳鑽", name: "吳鑽", image: "https://wuzuantw.com/images/favicon.png",
     group: "infrastructure", position: "member",
+    bio: ["🫠"],
+    socialLinks: [
+      { label: "Instagram", href: "https://instagram.com/wuzuantw" },
+      { label: "GitHub", href: "https://github.com/wu-zuan/" },
+    ],
   },
   {
     id: "br3ach", name: "Br3ach", image: null,
