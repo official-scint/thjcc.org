@@ -170,8 +170,13 @@ export const teamMembers: TeamMember[] = [
     ],
   },
   {
-    id: "br3ach", name: "Br3ach", image: null,
+    id: "br3ach", name: "Br3ach", image: "https://avatars.githubusercontent.com/u/177837321",
     group: "administration", position: "member",
+    bio: ["我只希望下個月的token可以燒少一點..."],
+    socialLinks: [
+      { label: "個人網站", href: "https://blog.br3ach.workers.dev/" },
+      { label: "GitHub", href: "https://github.com/user-404-not-found" },
+    ],
   },
   {
     id: "凡", name: "凡", image: "https://casperlin100w.github.io/image/sidebar/avatar.jpg",
