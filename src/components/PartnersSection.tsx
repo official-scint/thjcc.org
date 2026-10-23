@@ -6,22 +6,30 @@ import { OrganizationModal } from "./OrganizationModal";
 import { OrganizationLogo } from "./OrganizationLogo";
 import { SectionAction } from "./SectionAction";
 
-function OrganizationCards({ items, variant = "three", onSelect }: {
+function OrganizationCards({ items, variant = "three", startIndex = 0, onSelect }: {
   items: Organization[];
   variant?: "one" | "two" | "three";
+  startIndex?: number;
   onSelect: (organization: Organization) => void;
 }) {
+  const columns = variant === "three" ? 3 : variant === "two" ? 2 : 1;
   return (
     <ul className={`organization-grid organization-grid--${variant}`}>
-      {items.map(item => (
-        <li className={`organization-card organization-card--${item.corner} organization-card--${item.id}`} key={item.id}>
-          <button className="organization-card-trigger" type="button" aria-haspopup="dialog"
-            aria-label={`詳細介紹：${item.name}`} onClick={() => onSelect(item)}>
-            <OrganizationLogo id={item.id} />
-            <span className="organization-name">{item.name}</span>
-          </button>
-        </li>
-      ))}
+      {items.map((item, index) => {
+        const column = index % columns;
+        const roundedLeft = startIndex + index === 0 || (columns > 1 && column === 0);
+        const roundedRight = column === columns - 1;
+        const corner = roundedLeft && roundedRight ? "round" : roundedLeft ? "left" : roundedRight ? "right" : "middle";
+        return (
+          <li className={`organization-card organization-card--${corner} organization-card--${item.id}`} key={item.id}>
+            <button className="organization-card-trigger" type="button" aria-haspopup="dialog"
+              aria-label={`詳細介紹：${item.name}`} onClick={() => onSelect(item)}>
+              <OrganizationLogo id={item.id} />
+              <span className="organization-name">{item.name}</span>
+            </button>
+          </li>
+        );
+      })}
     </ul>
   );
 }
@@ -49,8 +57,13 @@ export function PartnersSection() {
           </section>
           <section className="organization-group organization-group--partners" aria-labelledby="supporters-title">
             <h3 className="organization-heading" id="supporters-title"><span>合作單位</span></h3>
-            <OrganizationCards items={partners} variant="one" onSelect={setSelected} />
+            <OrganizationCards items={partners.slice(0, 1)} variant="one" onSelect={setSelected} />
           </section>
+          {partners.length > 1 && (
+            <section className="organization-group organization-group--partner-overflow" aria-labelledby="supporters-title">
+              <OrganizationCards items={partners.slice(1)} startIndex={1} onSelect={setSelected} />
+            </section>
+          )}
         </div>
         <SectionAction section="partners" placement="footer" />
       </div>

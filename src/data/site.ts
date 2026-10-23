@@ -45,21 +45,20 @@ export const aboutCopy = aboutParagraphs.join("");
 export type Organization = {
   id: "scint" | "scaict" | "scist" | "hitcon" | "ocf" | "ncse" | "longtai";
   name: string;
-  corner: "left" | "middle" | "right" | "round";
 };
 
 export const organizers: Organization[] = [
-  { id: "scint", name: "北臺灣學生資訊社群", corner: "left" },
-  { id: "scaict", name: "中部高中電資社團聯合會議", corner: "middle" },
-  { id: "scist", name: "南臺灣學生資訊社群", corner: "right" },
+  { id: "scint", name: "北臺灣學生資訊社群" },
+  { id: "scaict", name: "中部高中電資社團聯合會議" },
+  { id: "scist", name: "南臺灣學生資訊社群" },
 ];
 
 export const coorganizers: Organization[] = [
-  { id: "hitcon", name: "社團法人台灣駭客協會", corner: "left" },
-  { id: "ocf", name: "財團法人開放文化基金會", corner: "right" },
+  { id: "hitcon", name: "社團法人台灣駭客協會" },
+  { id: "ocf", name: "財團法人開放文化基金會" },
 ];
 
 export const partners: Organization[] = [
-  { id: "ncse", name: "NCSE Network", corner: "left" },
-  { id: "longtai", name: "longtai.me", corner: "right" },
+  { id: "ncse", name: "NCSE Network" },
+  { id: "longtai", name: "longtai.me" },
 ];

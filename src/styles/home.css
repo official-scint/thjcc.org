@@ -1106,6 +1106,14 @@
   padding-right: 5px;
 }
 
+.organization-group--partner-overflow {
+  grid-column: 1 / -1;
+}
+
+.organization-group--partner-overflow .organization-grid {
+  margin-top: 0;
+}
+
 .organization-group--partners .organization-heading {
   padding-right: 15px;
 }
@@ -1328,6 +1336,18 @@
 
   .organization-group--partners {
     max-width: 50%;
+  }
+
+  .organization-group--partner-overflow .organization-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .organization-group--partner-overflow .organization-card:nth-child(odd) {
+    border-radius: var(--radius-card-large) var(--radius-card-small) var(--radius-card-small) var(--radius-card-large);
+  }
+
+  .organization-group--partner-overflow .organization-card:nth-child(even) {
+    border-radius: var(--radius-card-small) var(--radius-card-large) var(--radius-card-large) var(--radius-card-small);
   }
 
   .organization-grid--one {
@@ -1783,6 +1803,14 @@
 
   .organization-group--partners {
     max-width: none;
+  }
+
+  .organization-group--partner-overflow .organization-grid {
+    grid-template-columns: minmax(0, 370px);
+  }
+
+  .organization-group--partner-overflow .organization-card:nth-child(n) {
+    border-radius: var(--radius-card-large);
   }
 
   .organization-card {
