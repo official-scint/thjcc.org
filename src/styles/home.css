@@ -1042,6 +1042,17 @@
   height: 77px;
 }
 
+.organization-logo--longtai {
+  top: 49px;
+  width: 220px;
+}
+
+.organization-logo--longtai img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .organization-logo--ncse img {
   position: absolute;
   height: auto;

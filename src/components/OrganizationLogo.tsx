@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { Organization } from "@/data/site";
+import longtaiLogo from "../../public/images/logo-longtai.png";
 
 export function OrganizationLogo({ id }: { id: Organization["id"] }) {
   if (id === "ncse") {
@@ -14,11 +15,13 @@ export function OrganizationLogo({ id }: { id: Organization["id"] }) {
 
   const sizes = {
     scint: [262, 46], scaict: [247, 78], scist: [226, 57], hitcon: [138, 105], ocf: [277, 118],
+    longtai: [longtaiLogo.width, longtaiLogo.height],
   } as const;
   const [width, height] = sizes[id];
   return (
     <div className={`organization-logo organization-logo--${id}`}>
-      <Image src={`/images/logo-${id}.${id === "scist" ? "svg" : "webp"}`} alt="" width={width} height={height}
+      <Image src={id === "longtai" ? longtaiLogo : `/images/logo-${id}.${id === "scist" ? "svg" : "webp"}`}
+        alt="" width={width} height={height}
         sizes="(max-width: 479px) 240px, 277px" />
     </div>
   );
