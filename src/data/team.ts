@@ -134,7 +134,7 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: "kaiyasi", name: "Kaiyasi", image: "/images/team-kaiyasi.webp",
-    group: "challenges", position: "member",
+    group: "infrastructure", position: "member",
     bio: ["OTJcMlI8V3lOPjp2YF05OE5EQ285Mjc2NDZDIVRBOnVHQlo0QWdqcA=="],
     socialLinks: [
       { label: "Website", href: "https://www.gonets.top/" },
