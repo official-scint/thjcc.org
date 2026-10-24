@@ -98,7 +98,7 @@ export const teamMembers: TeamMember[] = [
     group: "challenges", position: "member",
   },
   {
-    id: "sirius-w", name: "SIRIUS-W", image: "https://siriusw823-avatar.pages.dev/IMAG2263_1.jpg",
+    id: "sirius-w", name: "SIRIUS-W", image: "/images/team-sirius-w.webp",
     group: "challenges", position: "member",
     bio: ["熱知識：SIRIUS 是天狼星的意思"],
     socialLinks: [
@@ -116,8 +116,13 @@ export const teamMembers: TeamMember[] = [
     group: "challenges", position: "member",
   },
   {
-    id: "jimmy", name: "jimmy", image: null,
+    id: "jimmy", name: "jimmy", image: "/images/team-jimmy.webp",
     group: "challenges", position: "member",
+    bio: ["🫩"],
+    socialLinks: [
+      { label: "GitHub", href: "https://github.com/jimmy20180130" },
+      { label: "website", href: "https://blog.xi11.cc/" },
+    ],
   },
   {
     id: "lairay", name: "LaiRay", image: null,
@@ -128,7 +133,16 @@ export const teamMembers: TeamMember[] = [
     group: "challenges", position: "member",
   },
   {
-    id: "r3x-dj", name: "R3X DJ", image: "https://r3xdj.pages.dev/img/icy_star.png",
+    id: "kaiyasi", name: "Kaiyasi", image: "/images/team-kaiyasi.webp",
+    group: "challenges", position: "member",
+    bio: ["OTJcMlI8V3lOPjp2YF05OE5EQ285Mjc2NDZDIVRBOnVHQlo0QWdqcA=="],
+    socialLinks: [
+      { label: "Website", href: "https://www.gonets.top/" },
+      { label: "GitHub", href: "https://github.com/kaiyasi" },
+    ],
+  },
+  {
+    id: "r3x-dj", name: "R3X DJ", image: "/images/team-r3x-dj.webp",
     group: "challenges", position: "member",
     bio: ["RCEs 戰隊隊長，喜歡數學、資安、講幹話。可以教我怎麼出 CTF 題目ㄇ"],
     socialLinks: [
@@ -138,7 +152,7 @@ export const teamMembers: TeamMember[] = [
     ]
   },
   {
-    id: "cgm-97", name: "Cgm._.97", image: "https://cgm-csie.me/img/Profile.png",
+    id: "cgm-97", name: "Cgm._.97", image: "/images/team-cgm-97.webp",
     group: "challenges", position: "member",
     bio: ["RCEs 戰隊副隊長，一個正在資工系熬夜爆肝的高三生"],
     socialLinks: [
@@ -156,7 +170,7 @@ export const teamMembers: TeamMember[] = [
     group: "testing", position: "lead",
   },
   {
-    id: "steven", name: "Steven", image: "https://steventeng.uk/steven-drawing.png",
+    id: "steven", name: "Steven", image: "/images/team-steven.webp",
     group: "infrastructure", position: "member",
     bio: ["好玩😊"],
     socialLinks: [
@@ -167,7 +181,7 @@ export const teamMembers: TeamMember[] = [
     ],
   },
   {
-    id: "吳鑽", name: "吳鑽", image: "https://wuzuantw.com/images/favicon.png",
+    id: "吳鑽", name: "吳鑽", image: "/images/team-wuzuan.webp",
     group: "infrastructure", position: "member",
     bio: ["🫠"],
     socialLinks: [
@@ -176,7 +190,7 @@ export const teamMembers: TeamMember[] = [
     ],
   },
   {
-    id: "br3ach", name: "Br3ach", image: "https://avatars.githubusercontent.com/u/177837321",
+    id: "br3ach", name: "Br3ach", image: "/images/team-br3ach.webp",
     group: "administration", position: "member",
     bio: ["我只希望下個月的token可以燒少一點..."],
     socialLinks: [
@@ -185,7 +199,7 @@ export const teamMembers: TeamMember[] = [
     ],
   },
   {
-    id: "凡", name: "凡", image: "https://casperlin100w.github.io/image/sidebar/avatar.jpg",
+    id: "凡", name: "凡", image: "/images/team-fan.webp",
     group: "administration", position: "member",
     bio: ["聽說這邊需要文書所以我來了，人家是資安小白我是白到反光o(TヘTo)"],
     socialLinks: [
