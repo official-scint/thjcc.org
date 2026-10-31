@@ -54,11 +54,11 @@ export const organizers: Organization[] = [
 ];
 
 export const coorganizers: Organization[] = [
-  { id: "hitcon", name: "社團法人台灣駭客協會" },
   { id: "ocf", name: "財團法人開放文化基金會" },
 ];
 
 export const partners: Organization[] = [
+  { id: "hitcon", name: "社團法人台灣駭客協會" },
   { id: "ncse", name: "NCSE Network" },
   { id: "longtai", name: "longtai.me" },
 ];

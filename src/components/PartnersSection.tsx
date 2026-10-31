@@ -7,10 +7,9 @@ import { OrganizationModal } from "./OrganizationModal";
 import { OrganizationLogo } from "./OrganizationLogo";
 import { SectionAction } from "./SectionAction";
 
-function OrganizationCards({ items, variant = "three", startIndex = 0, onSelect, children }: {
+function OrganizationCards({ items, variant = "three", onSelect, children }: {
   items: Organization[];
   variant?: "one" | "two" | "three";
-  startIndex?: number;
   onSelect: (organization: Organization) => void;
   children?: ReactNode;
 }) {
@@ -19,7 +18,7 @@ function OrganizationCards({ items, variant = "three", startIndex = 0, onSelect,
     <ul className={`organization-grid organization-grid--${variant}`}>
       {items.map((item, index) => {
         const column = index % columns;
-        const roundedLeft = startIndex + index === 0 || (columns > 1 && column === 0);
+        const roundedLeft = index === 0 || (columns > 1 && column === 0);
         const roundedRight = column === columns - 1;
         const corner = roundedLeft && roundedRight ? "round" : roundedLeft ? "left" : roundedRight ? "right" : "middle";
         return (
@@ -54,16 +53,16 @@ export function PartnersSection() {
           <OrganizationCards items={organizers} onSelect={setSelected} />
         </section>
         <div className="support-groups">
-          <section className="organization-group" aria-labelledby="coorganizers-title">
+          <section className="organization-group organization-group--coorganizers" aria-labelledby="coorganizers-title">
             <h3 className="organization-heading" id="coorganizers-title"><span>協辦單位</span></h3>
-            <OrganizationCards items={coorganizers} variant="two" onSelect={setSelected} />
+            <OrganizationCards items={coorganizers} variant="one" onSelect={setSelected} />
           </section>
           <section className="organization-group organization-group--partners" aria-labelledby="supporters-title">
             <h3 className="organization-heading" id="supporters-title"><span>合作單位</span></h3>
-            <OrganizationCards items={partners.slice(0, 1)} variant="one" onSelect={setSelected} />
+            <OrganizationCards items={partners.slice(0, 2)} variant="two" onSelect={setSelected} />
           </section>
-          <section className="organization-group organization-group--partner-overflow" aria-labelledby="supporters-title">
-            <OrganizationCards items={partners.slice(1)} startIndex={1} onSelect={setSelected}>
+          <div className="organization-group organization-group--partner-overflow">
+            <OrganizationCards items={partners.slice(2)} onSelect={setSelected}>
               <li className="organization-recruitment">
                 <Link className="organization-recruitment-link" href={site.links.sponsorship}>
                   <span className="organization-recruitment-title">合作夥伴招募中</span>
@@ -71,7 +70,7 @@ export function PartnersSection() {
                 </Link>
               </li>
             </OrganizationCards>
-          </section>
+          </div>
         </div>
         <SectionAction section="partners" placement="footer" />
       </div>

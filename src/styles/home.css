@@ -1091,8 +1091,12 @@
 
 .support-groups {
   display: grid;
-  grid-template-columns: minmax(0, 800px) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 400px) minmax(0, 1fr);
   gap: 25px;
+}
+
+.organization-group--coorganizers {
+  width: min(100%, 400px);
 }
 
 .support-groups .organization-heading {
@@ -1151,6 +1155,10 @@
 
 .organization-group--partners .organization-heading {
   padding-right: 15px;
+}
+
+.organization-group--partners .organization-grid {
+  grid-template-columns: repeat(2, minmax(0, 370px));
 }
 
 .organization-grid--two {
@@ -1293,11 +1301,6 @@
     gap: 24px;
   }
 
-  .support-groups {
-    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
-    gap: 24px;
-  }
-
   .organization-grid--one {
     padding-inline: 0 10px;
   }
@@ -1369,23 +1372,23 @@
     gap: 32px;
   }
 
-  .organization-group--partners {
-    max-width: 50%;
-  }
-
-  .organization-group--partner-overflow .organization-grid {
+  .organization-group--partners .organization-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .organization-recruitment {
-    border-radius: var(--radius-card-large);
+  .organization-group--partner-overflow .organization-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .organization-group--partner-overflow .organization-card:nth-child(odd) {
+  .organization-group--partner-overflow .organization-logo--longtai {
+    width: min(220px, calc(100% - 24px));
+  }
+
+  .organization-group--partners .organization-card:nth-child(odd) {
     border-radius: var(--radius-card-large) var(--radius-card-small) var(--radius-card-small) var(--radius-card-large);
   }
 
-  .organization-group--partner-overflow .organization-card:nth-child(even) {
+  .organization-group--partners .organization-card:nth-child(even) {
     border-radius: var(--radius-card-small) var(--radius-card-large) var(--radius-card-large) var(--radius-card-small);
   }
 
@@ -1840,8 +1843,8 @@
     padding: 0;
   }
 
-  .organization-group--partners {
-    max-width: none;
+  .organization-group--partners .organization-grid {
+    grid-template-columns: minmax(0, 370px);
   }
 
   .organization-group--partner-overflow .organization-grid {
@@ -1850,8 +1853,10 @@
 
   .organization-recruitment {
     grid-column: 1;
+    border-radius: var(--radius-card-large);
   }
 
+  .organization-group--partners .organization-card:nth-child(n),
   .organization-group--partner-overflow .organization-card:nth-child(n) {
     border-radius: var(--radius-card-large);
   }

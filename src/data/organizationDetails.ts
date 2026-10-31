@@ -43,10 +43,10 @@ export const organizationDetails: Record<Organization["id"], OrganizationDetails
   },
   hitcon: {
     shortName: "HIT",
-    category: "協辦單位",
+    category: "合作單位",
     paragraphs: [
       "社團法人台灣駭客協會以推廣資訊安全與駭客精神為目標，透過研討會、教育訓練與社群計畫，促進技術交流和資安人才培育。",
-      "協會的相關計畫包含 HITCON、CTF 競賽與 ZeroDay 公益漏洞通報平台，也持續支持臺灣資安社群。台灣駭客協會是本屆 THJCC 的協辦單位之一。",
+      "協會的相關計畫包含 HITCON、CTF 競賽與 ZeroDay 公益漏洞通報平台，也持續支持臺灣資安社群。台灣駭客協會是本屆 THJCC 的合作單位之一。",
     ],
     highlights: ["資訊安全研討會與訓練", "CTF 與社群交流", "公益漏洞通報與人才培育"],
     website: "https://hacker.org.tw/",
