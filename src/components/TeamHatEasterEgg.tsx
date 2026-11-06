@@ -4,7 +4,7 @@ import { useEffect, useId, useState, type CSSProperties } from "react";
 import { ModalCloseButton } from "./ModalCloseButton";
 import { useAnimatedDialog } from "@/lib/use-animated-dialog";
 
-const FLAG = "THJCC{H4TS_1N_SYNC}";
+const FLAG = "THJCC-HCR{H4TS_1N_SYNC}";
 
 export function TeamHatEasterEgg({ open, onClose, onReset }: { open: boolean; onClose: () => void; onReset: () => void }) {
   const { modal, requestClose } = useAnimatedDialog(open, onClose);
